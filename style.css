@@ -1,0 +1,99 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#game{
+  width: 700px;
+  height: 400px;
+  border: 5px dotted black;
+  margin: 50px auto 0;
+  position: relative;
+  overflow: hidden;
+}
+#text{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+#text h2{
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 10px;
+}
+
+#scoreboard{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 80px;
+  height: 50px;
+  border: 2px solid black;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#score{
+  font-size: 50px;
+  
+}
+#background{
+  width: 1000px;
+  height: 90%;
+  position:absolute;
+  top: 0px;
+  left: 0px;
+  background: url("assets/background.png");
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: 100% auto;
+  animation: backgMove 5s linear infinite;
+}
+
+@keyframes backgMove {
+  from{background-position: 0 0;}
+  to{background-position: -1000px 0;}
+}
+
+#player{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 50px;
+  bottom: 80px;
+  z-index:1000;
+}
+
+#player img{
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes jump{
+  0%{bottom: 80px}
+  45%, 55%{bottom: 200px}
+}
+
+.playerJump{
+  animation: jump 0.8s linear;
+}
+
+#cactus{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 50px;
+  bottom: 80px;
+  animation: cactusMove 3s linear infinite;
+}
+
+#cactus img{
+  width: 90%;
+  height: 90%;
+}
+
+@keyframes cactusMove{
+  0%{right: -50px}
+  100%{right: 900px}
+}
